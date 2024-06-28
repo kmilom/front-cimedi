@@ -12,6 +12,9 @@ pasos:
 3. comando de creacion: create-react-app front-cimedi
 
 //Conexión con el repositorio para el proyecto:
-1. Abrir terminal de comandos.
+1. Abrir terminal de comandos y asegurarse de estar situado en la carpeta correcta.
 2. Iniciar git: git init
-3. Cinectar repositorio remoto de forma local: git remote add origin https://github.com/kmilom/front-cimedi.git
+3. Conectar repositorio remoto de forma local: git remote add origin https://github.com/kmilom/front-cimedi.git
+4. Agregar todos los archivos que se van a subir: git add .
+5. Primer commit: git commit -m "Initial commit"
+6. Enviar archivos al repositorio: git push -u origin master
