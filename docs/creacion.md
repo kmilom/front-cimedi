@@ -18,3 +18,10 @@ pasos:
 4. Agregar todos los archivos que se van a subir: git add .
 5. Primer commit: git commit -m "Initial commit"
 6. Enviar archivos al repositorio: git push -u origin master
+
+//Creación de nueva rama:
+1. Verificar que se está en la rama que se desea copiar, en este caso 'master': git checkout master
+2. Actualizar los últimos cambios hechos a la rama: git pull origin master
+3. Crear nueva rama, en este caso 'feature/home: git checkout -b feature/home
+4. Subir la nueva rama: git push origin feature/home
+
