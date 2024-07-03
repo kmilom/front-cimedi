@@ -25,3 +25,8 @@ pasos:
 3. Crear nueva rama, en este caso 'feature/home: git checkout -b feature/home
 4. Subir la nueva rama: git push origin feature/home
 
+//Eliminar rama
+1. Debes estar en cualquier rama que no sea la que vas a eliminar: git checkout master
+2. Eliminar la rama localmente: git branch -d feature/home
+3. Eliminar la rama del repositorio remoto: git push origin --delete feature/home
+4. Otros miembros deben actualizar las ramas locales para ver reflejada la eliminación: git fetch --prune
