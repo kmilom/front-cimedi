@@ -13,4 +13,4 @@ acceso a datos modelo son basicamente los atributos de las tablas.
 
 //servicios: Implementación de servicios que interactúan con API externas o manejan lógica de negocio compleja 
 por ahora dejemosla no se mucho que quiera decir porque en los controladores van los llamados a la api asi que aca no se
-si lo que iria seria la logica de como se consume no el llamdo si no el consumo de la api 
+si lo que iria seria la logica de como se consume no el llamado si no el consumo de la api 
