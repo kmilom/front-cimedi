@@ -2,6 +2,7 @@ import React from 'react';
 import LoginForm from '../components/loginForms';
 import authService from '../services/authenticationService';
 import Footer from '../components/footer';
+import Navbar from '../components/navBar';
 
 /* aca se renderiza el componente usando un componente funcional del tipo funcion flecha que permite que no se 
 sobreescriba o exista una reasignacion*/
@@ -18,9 +19,15 @@ const LoginView = () => {
   };
 
   return (
-      //contenedor del formulario
-      <div className="min-h-screen flex items-center justify-center bg-gray-200 "> 
-      <LoginForm onSubmit={handleLogin} />
+    //contenedor principal
+    <div className="min-h-screen flex flex-col bg-gray-200">
+      <Navbar />
+      {/* Contenedor del formulario */}
+      <div className="flex-grow flex items-center justify-center">
+        <LoginForm onSubmit={handleLogin} />
+      </div>
+      {/* Footer */}
+      <Footer className="bg-blue-500 text-white p-4" />
     </div>
   );
 };
