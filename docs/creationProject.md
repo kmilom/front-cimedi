@@ -22,7 +22,7 @@ pasos:
 //Creación de nueva rama:
 1. Verificar que se está en la rama que se desea copiar, en este caso 'master': git checkout master
 2. Actualizar los últimos cambios hechos a la rama: git pull origin master
-3. Crear nueva rama, en este caso 'feature/home: git checkout -b feature/home
+3. Crear nueva rama, en este caso 'feature/home': git checkout -b feature/home
 4. Subir la nueva rama: git push origin feature/home
 
 //Eliminar rama
