@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginView from './views/loginViews'; 
+import RegistreView from './views/registreViews';
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LoginView />} />
+        <Route path="/" element={<RegistreView />} />
       </Routes>
     </Router>
   );
