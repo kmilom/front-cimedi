@@ -1,6 +1,7 @@
 import React from 'react';
 import LoginForm from '../components/loginForms';
 import authService from '../services/authenticationService';
+import Footer from '../components/footer';
 
 /* aca se renderiza el componente usando un componente funcional del tipo funcion flecha que permite que no se 
 sobreescriba o exista una reasignacion*/
