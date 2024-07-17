@@ -30,3 +30,12 @@ pasos:
 2. Eliminar la rama localmente: git branch -d feature/home
 3. Eliminar la rama del repositorio remoto: git push origin --delete feature/home
 4. Otros miembros deben actualizar las ramas locales para ver reflejada la eliminación: git fetch --prune
+
+//Fusionar ramas
+1. Debes estar en la rama principal: git checkout master
+2. Actualizar la rama: git pull origin master
+3. Fusionar ramas: git merge feature/home
+4. Se debe resolver los posibles conflictos que surjan 
+5. Añadir los archivos con los conflictos resueltos: git add .
+6. El commit para confirmar la fusión: git commit
+7. Agregar los cambios al repositorio: git push origin master
