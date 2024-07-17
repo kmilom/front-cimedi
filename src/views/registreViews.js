@@ -4,20 +4,21 @@ import Footer from '../components/footer';
 import Label from '../components/label';
 import Input from '../components/input';
 
-
-const RegistreView = () => {
+const RegisterView = () => {
     const [formData, setFormData] = useState({
-        nombre: '',
-        apellido: '',
-        fechaNacimiento: '',
-        correo: '',
-        celular: '',
-        tipoDocumento: '',
-        numeroDocumento: '',
-        genero: '',
-        departamento: '',
-        ciudad: '',
-        eps: ''
+        name: '',
+        lastName: '',
+        birthday: '',
+        email: '',
+        phone: '',
+        idDocumentType: '',
+        document: '',
+        idGender: '',
+        idDepartment: '',
+        idCity: '',
+        idEps: '',
+        userName: '',
+        password: ''
     });
 
     const handleChange = (e) => {
@@ -28,8 +29,10 @@ const RegistreView = () => {
         });
     };
 
-   const handleSubmit = (e) => {
-        e.preventDefault();      
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log('Datos del formulario:', formData);
+        // Aquí iría el código para enviar los datos al backend
     };
 
     return (
@@ -37,139 +40,161 @@ const RegistreView = () => {
             <Navbar />
             <main className="flex-grow">
                 <form onSubmit={handleSubmit} className="max-w-lg mx-auto my-4 p-4 bg-white shadow-md rounded-md border border-gray-700">
-                    <h2 className="text-2xl font-bold mb-4 text-center">REGISTRO DE USUARIO</h2>
+                    <h2 className="text-2xl font-bold mb-4 text-center">REGISTRO</h2>
                     <div className="mb-4">
-                        <Label htmlFor="nombre">Nombre</Label>
+                        <Label htmlFor="name">Nombre</Label>
                         <Input
                             type="text"
-                            id="nombre"
-                            name="nombre"
-                            value={formData.nombre}
+                            id="name"
+                            name="name"
+                            value={formData.name}
                             onChange={handleChange}
                             required
                         />
                     </div>
                     <div className="mb-4">
-                        <Label htmlFor="apellido">Apellido</Label>
+                        <Label htmlFor="lastName">Apellido</Label>
                         <Input
                             type="text"
-                            id="apellido"
-                            name="apellido"
-                            value={formData.apellido}
+                            id="lastName"
+                            name="lastName"
+                            value={formData.lastName}
                             onChange={handleChange}
                             required
                         />
                     </div>
                     <div className="mb-4">
-                        <Label htmlFor="fechaNacimiento">Fecha de Nacimiento</Label>
+                        <Label htmlFor="birthday">Fecha Nacimiento</Label>
                         <Input
                             type="date"
-                            id="fechaNacimiento"
-                            name="fechaNacimiento"
-                            value={formData.fechaNacimiento}
+                            id="birthday"
+                            name="birthday"
+                            value={formData.birthday}
                             onChange={handleChange}
                             required
                         />
                     </div>
                     <div className="mb-4">
-                        <Label htmlFor="correo">Correo Electrónico</Label>
+                        <Label htmlFor="email">Email</Label>
                         <Input
                             type="email"
-                            id="correo"
-                            name="correo"
-                            value={formData.correo}
+                            id="email"
+                            name="email"
+                            value={formData.email}
                             onChange={handleChange}
                             required
                         />
                     </div>
                     <div className="mb-4">
-                        <Label htmlFor="celular">Celular</Label>
+                        <Label htmlFor="phone">Telefono</Label>
                         <Input
                             type="tel"
-                            id="celular"
-                            name="celular"
-                            value={formData.celular}
+                            id="phone"
+                            name="phone"
+                            value={formData.phone}
                             onChange={handleChange}
                             required
                         />
                     </div>
                     <div className="mb-4">
-                        <Label htmlFor="tipoDocumento">Tipo de Documento</Label>
+                        <Label htmlFor="idDocumentType">Tipo Documento</Label>
                         <select
-                            id="tipoDocumento"
-                            name="tipoDocumento"
-                            value={formData.tipoDocumento}
+                            id="idDocumentType"
+                            name="idDocumentType"
+                            value={formData.idDocumentType}
                             onChange={handleChange}
                             required
                             className="shadow appearance-none border border-gray-400 rounded-xl w-full p-1 text-gray-900 leading-tight"
                         >
-                            <option value="">Seleccione</option>
-                            <option value="CC">Cédula de Ciudadanía</option>
-                            <option value="TI">Tarjeta de Identidad</option>
-                            <option value="CE">Cédula de Extranjería</option>
+                            <option value="">Select</option>
+                            <option value="CC">Cedula De Ciudadania</option>
+                            <option value="TI">Tarjeta De Identidad</option>
+                            <option value="CE">Documento Extranjeria</option>
                         </select>
                     </div>
                     <div className="mb-4">
-                        <Label htmlFor="numeroDocumento">Número de Documento</Label>
+                        <Label htmlFor="document">Document Number</Label>
                         <Input
                             type="text"
-                            id="numeroDocumento"
-                            name="numeroDocumento"
-                            value={formData.numeroDocumento}
+                            id="document"
+                            name="document"
+                            value={formData.document}
                             onChange={handleChange}
                             required
                         />
                     </div>
                     <div className="mb-4">
-                        <Label htmlFor="genero">Género</Label>
+                        <Label htmlFor="idGender">Genero</Label>
                         <select
-                            id="genero"
-                            name="genero"
-                            value={formData.genero}
+                            id="idGender"
+                            name="idGender"
+                            value={formData.idGender}
                             onChange={handleChange}
                             required
                             className="shadow appearance-none border border-gray-400 rounded-xl w-full p-1 text-gray-900 leading-tight"
                         >
-                            <option value="">Seleccione</option>
-                            <option value="Masculino">Masculino</option>
-                            <option value="Femenino">Femenino</option>
-                            <option value="Otro">Otro</option>
+                            <option value="">Select</option>
+                            <option value="Male">Masculino</option>
+                            <option value="Female">Femenino</option>
+                            <option value="Other">Otro</option>
                         </select>
                     </div>
                     <div className="mb-4">
-                        <Label htmlFor="departamento">Departamento</Label>
+                        <Label htmlFor="idDepartment">Departamento</Label>
                         <Input
                             type="text"
-                            id="departamento"
-                            name="departamento"
-                            value={formData.departamento}
+                            id="idDepartment"
+                            name="idDepartment"
+                            value={formData.idDepartment}
                             onChange={handleChange}
                             required
                         />
                     </div>
                     <div className="mb-4">
-                        <Label htmlFor="ciudad">Ciudad</Label>
+                        <Label htmlFor="idCity">Ciudad</Label>
                         <Input
                             type="text"
-                            id="ciudad"
-                            name="ciudad"
-                            value={formData.ciudad}
+                            id="idCity"
+                            name="idCity"
+                            value={formData.idCity}
                             onChange={handleChange}
                             required
                         />
                     </div>
                     <div className="mb-4">
-                        <Label htmlFor="eps">EPS</Label>
+                        <Label htmlFor="idEps">EPS</Label>
                         <Input
                             type="text"
-                            id="eps"
-                            name="eps"
-                            value={formData.eps}
+                            id="idEps"
+                            name="idEps"
+                            value={formData.idEps}
                             onChange={handleChange}
                             required
                         />
                     </div>
-                    <div className='flex justify-center'>
+                    <div className="mb-4">
+                        <Label htmlFor="userName">Nombre De Usuario</Label>
+                        <Input
+                            type="text"
+                            id="userName"
+                            name="userName"
+                            value={formData.userName}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <Label htmlFor="password">Contraseña</Label>
+                        <Input
+                            type="password"
+                            id="password"
+                            name="password"
+                            value={formData.password}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className='flex justify-center mt-4'>
                         <button
                             type="submit"
                             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md w-full sm:w-auto"
@@ -184,4 +209,4 @@ const RegistreView = () => {
     );
 };
 
-export default RegistreView;
+export default RegisterView;

@@ -1,28 +1,32 @@
-// src/controllers/registreController.js
-import { Persona } from '../models/personModel';
-import { Paciente } from '../models/patientModel';
-import { Usuario } from '../models/userModel';
-import { guardarPersona, guardarPaciente, guardarUsuario } from '../services/RegistroService';
+// src/controllers/registerController.js
+import People from '../models/peopleModel';
+import Patients from '../models/patientsModel';
+import Users from '../models/usersModel';
+import { savePeople, savePatients, saveUsers } from '../services/registerService';
 
-export const registrarPersona = async (formData) => {
-    const persona = new Persona(
-        formData.nombre,
-        formData.apellido,
-        formData.fechaNacimiento,
-        formData.correo,
-        formData.celular,
-        formData.tipoDocumento,
-        formData.numeroDocumento,
-        formData.genero,
-        formData.departamento,
-        formData.ciudad
+const registerPerson = async (formData) => {
+    const person = new People(
+        formData.name,
+        formData.lastName,
+        formData.birthday,
+        formData.email,
+        formData.phone,
+        formData.idDocumentType,
+        formData.document,
+        formData.idGender,
+        formData.idDepartment,
+        formData.idCity
     );
 
-    const personaId = await guardarPersona(persona);
+    const id = await savePeople(person);
 
-    const paciente = new Paciente(personaId, formData.eps);
-    await guardarPaciente(paciente);
+    const patient = new Patients( id,formData.idEps);
 
-    const usuario = new Usuario(personaId, formData.nombre, formData.numeroDocumento);
-    await guardarUsuario(usuario);
+    await savePatients(patient);
+
+    const user = new Users( id,formData.userName,formData.password);
+
+    await saveUsers(user);
 };
+
+export default registerPerson;
