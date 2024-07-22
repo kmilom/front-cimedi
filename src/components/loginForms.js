@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 //onsubmit es un prop que permite la comunicacion entre nuestro componente y nuestra vista
 const LoginForm = ({ onSubmit }) => {
@@ -39,6 +40,7 @@ const LoginForm = ({ onSubmit }) => {
       <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
         Iniciar Sesión
       </button>
+      <div className='flex justify-center hover:text-blue-500'><Link to="/registro">Reg&iacute;strate aqu&iacute;</Link></div>
     </form>
   );
 };

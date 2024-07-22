@@ -36,7 +36,7 @@ const RegisterView = () => {
     };
 
     return (
-        <div className="flex justify-center flex-col min-h-screen">
+        <div className="flex justify-center flex-col min-h-screen bg-gray-100">
             <Navbar />
             <main className="flex-grow">
                 <form onSubmit={handleSubmit} className="max-w-lg mx-auto my-4 p-4 bg-white shadow-md rounded-md border border-gray-700">
