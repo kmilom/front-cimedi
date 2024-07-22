@@ -14,8 +14,8 @@ const LoginForm = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto p-4 bg-white shadow-md rounded-md border border-black">
-      <h2 className="text-2xl font-sans mb-4 text-center">Iniciar Sesión</h2>
+    <form onSubmit={handleSubmit} className="max-w-md mx-auto p-4 bg-gray-100">
+      
       <div className="mb-4">
         <label className="block text-gray-700">Correo Electrónico</label>
         <input
@@ -36,7 +36,7 @@ const LoginForm = ({ onSubmit }) => {
           required
         />
       </div>
-      <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded-md">
+      <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
         Iniciar Sesión
       </button>
     </form>
