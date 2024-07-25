@@ -12,8 +12,8 @@ const PacienteView = () => {
   };
 
   const appointments = [
-    { id: 1, date: '2024-07-20', specialty: 'Cardiología', doctor: 'Dr. López' },
-    { id: 2, date: '2024-07-25', specialty: 'Dermatología', doctor: 'Dr. Martínez' },
+    { id: 1, date: '2024-07-20',time: '10:00 am' , specialty: 'Cardiología', doctor: 'Dr. López' },
+    { id: 2, date: '2024-07-25',time: '05:00 pm' , specialty: 'Dermatología', doctor: 'Dr. Martínez' },
     // ... otras citas
   ];
 
