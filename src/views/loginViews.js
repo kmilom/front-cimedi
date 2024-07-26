@@ -5,6 +5,7 @@ import Footer from '../components/footer';
 import Navbar from '../components/navBar';
 import Modal from '../components/modalLogin';
 import image from '../assets/imagelanding.jpg'
+import Header from '../components/header';
 
 /* aca se renderiza el componente usando un componente funcional del tipo funcion flecha que permite que no se 
 sobreescriba o exista una reasignacion*/
@@ -29,7 +30,9 @@ const LoginView = () => {
   return (
     //contenedor principal
     <div className="min-h-screen flex flex-col bg-gray-200">
-      <Navbar />
+      <Header>
+        <Navbar />
+      </Header>
       {/* Contenedor secundario */}
       <div className="flex-grow flex flex-col md:flex-row items-stretch bg-yellow-50">
         <div className="w-full md:w-1/2 border border-black">

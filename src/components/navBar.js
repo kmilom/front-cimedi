@@ -9,7 +9,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-gradient-to-r from-blue-400 to-blue-600 py-2 px-4 md:px-8 shadow-lg mb-2 ">
+        <nav >
             <div className="container mx-auto flex justify-between items-center ">
                 <div className="text-white text-2xl font-bold flex items-center ">
                     <Logo />
