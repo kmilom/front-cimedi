@@ -1,27 +1,3 @@
-/*import React from 'react';
-
-const Modal = ({ isOpen, onClose, children }) => {
-  if (!isOpen) return null;
-
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full">
-        <div className="px-4 py-5 sm:p-6">
-          {children}
-        </div>
-        <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
-          <button
-            type="button"
-            className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
-            onClick={onClose}
-          >
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};*/
 import React from 'react';
 
 const Modal = ({ isOpen, onClose, children }) => {
